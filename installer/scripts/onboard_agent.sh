@@ -114,7 +114,7 @@ if [ "$EUID" != 0 ]; then
 fi
 
 # Download, install, and onboard OMSAgent for Linux, depending on architecture of machine
-if [ $(uname -m) = 'x86_64' ]; then
+if [ $(uname -m) = 'aarch64' ]; then
     # x64 architecture
     wget -O ${BUNDLE_X64} ${GITHUB_RELEASE_X64}${BUNDLE_X64} && $SUDO sh ./${BUNDLE_X64} ${bundleParameters}
 else
